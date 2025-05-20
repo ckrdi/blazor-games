@@ -23,9 +23,9 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish Snake.csproj -c Release -o release --nologo
     
-    # changes the base-tag in index.html from '/' to 'Snake' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to Snake
-      run: sed -i 's/<base href="\/" \/>/<base href="\/Snake\/" \/>/g' release/wwwroot/index.html
+    # changes the base-tag in index.html from '/' to 'blazor-games' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to blazor-games
+      run: sed -i 's/<base href="\/" \/>/<base href="\/blazor-games\/" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
